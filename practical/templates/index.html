@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Processing</title>
+</head>
+<body>
+    <h1>Image Processing</h1>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required><br><br>
+        Crop Image:<br>
+        x: <input type="text" name="x"><br>
+        y: <input type="text" name="y"><br>
+        width: <input type="text" name="width"><br>
+        height: <input type="text" name="height"><br><br>
+        Rotate Image:<br>
+        Angle: <input type="number" name="angle"><br><br>
+        Convert to Grayscale: <input type="checkbox" name="grayscale"><br><br>
+        <input type="submit" name="crop" value="Crop">
+        <input type="submit" name="rotate" value="Rotate">
+        <!-- <input type="submit" value="Submit"> -->
+    </form>
+</body>
+</html>
